@@ -24,6 +24,13 @@ pipeline {
                 sh 'mvn test'
             }
         }
+
+        stage('Checkout') {
+            steps {
+                git credentialsId: 'your-github-credentials-id', url: 'https://github.com/ADirin/sep2_week2_inclassDemo_2025.git'
+            }
+        }
+
         stage('Code Coverage') {
             steps {
                 sh 'mvn jacoco:report'
