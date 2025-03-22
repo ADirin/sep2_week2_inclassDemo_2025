@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/ADirin/sep2_week2_inclassDemo_2025.git'
+                git branch:'master', url:'https://github.com/ADirin/sep2_week2_inclassDemo_2025.git'
             }
         }
         stage('Build') {
@@ -25,11 +25,6 @@ pipeline {
             }
         }
 
-        stage('Checkout') {
-            steps {
-                git credentialsId: 'your-github-credentials-id', url: 'https://github.com/ADirin/sep2_week2_inclassDemo_2025.git'
-            }
-        }
 
         stage('Code Coverage') {
             steps {
