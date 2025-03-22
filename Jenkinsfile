@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsID:'ADirin', branch:'master', url:'https://github.com/ADirin/sep2_week2_inclassDemo_2025.git'
+                git  branch:'master', url:'https://github.com/ADirin/sep2_week2_inclassDemo_2025.git'
             }
         }
         stage('Build') {
